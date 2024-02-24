@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed = 5f;
-    float minPlayerSpeed = 5f;
+    float minPlayerSpeed = 10f;
 
     public float speed = 2f;
     float speedH;
@@ -13,11 +13,11 @@ public class PlayerMovement : MonoBehaviour
 
     //acelerar
 
-    public float maxPlayerSpeed = 20f;
-    bool applyAceleration = false;
+    public float maxPlayerSpeed = 50f;
+    public float acelerationSpeed = 100f;
+    float desacelerationSpeed;
+    public float desacelerationIndex = 4f;
 
-    public float acelerationSpeed = 4f;
-    
 
     private Rigidbody rb;
 
@@ -28,9 +28,7 @@ public class PlayerMovement : MonoBehaviour
         speedH = speed;
         speedV = speed;
 
-        applyAceleration = false;
-        
-
+        desacelerationSpeed = acelerationSpeed / desacelerationIndex;
     }
 
     void Update()
@@ -58,26 +56,21 @@ public class PlayerMovement : MonoBehaviour
         // Movimiento constante hacia adelante
         rb.velocity = transform.forward * playerSpeed;
 
-        if (Input.GetKeyDown("w"))
+        //mecanica para acelerar y desacelerar
+        if (Input.GetKey("w"))
         {
-            applyAceleration = true;
-            if (applyAceleration == true)
-            {
-                playerSpeed += (acelerationSpeed * Time.deltaTime);
-            }
-
+            // acelera
+            playerSpeed += acelerationSpeed * Time.deltaTime;
+        }
+        else 
+        {
+            // en cuanto se deja de apretar la w, empieza a desacelerar hasta llegar al minimo
+            playerSpeed -= desacelerationSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKeyUp("w"))
-        {
-            playerSpeed -= (acelerationSpeed * Time.deltaTime);
-            applyAceleration = false;
-
-            if (playerSpeed >= maxPlayerSpeed)
-            {
-                playerSpeed = minPlayerSpeed;
-            }
-        }
+        // mantener el player speed dentro del rango permitido, min y max
+        //Mathf.Clamp(value, min, max)
+        playerSpeed = Mathf.Clamp(playerSpeed, minPlayerSpeed, maxPlayerSpeed);
 
     }
 }
