@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 5376419826940862665}
   - component: {fileID: 1057152994514429739}
   - component: {fileID: 4879139109220953418}
+  - component: {fileID: 7582375937463516004}
   - component: {fileID: 3456720727258136810}
   m_Layer: 0
   m_Name: NaveJugador
@@ -298,6 +299,18 @@ CapsuleCollider:
   m_Height: 0.16932559
   m_Direction: 2
   m_Center: {x: 0.0036099711, y: 0.008518591, z: 0.0799475}
+--- !u!114 &7582375937463516004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880607275009360156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937a46662db334882b4e543da4543977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3456720727258136810
 MonoBehaviour:
   m_ObjectHideFlags: 0
