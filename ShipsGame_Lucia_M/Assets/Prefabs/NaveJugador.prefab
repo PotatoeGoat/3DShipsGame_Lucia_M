@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8762699899538934873
 Transform:
   m_ObjectHideFlags: 0
@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 5376419826940862665}
   - component: {fileID: 1057152994514429739}
   - component: {fileID: 4879139109220953418}
+  - component: {fileID: 3456720727258136810}
   m_Layer: 0
   m_Name: NaveJugador
   m_TagString: Untagged
@@ -297,6 +298,21 @@ CapsuleCollider:
   m_Height: 0.16932559
   m_Direction: 2
   m_Center: {x: 0.0036099711, y: 0.008518591, z: 0.0799475}
+--- !u!114 &3456720727258136810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880607275009360156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53cbc43ab53049f0a917083af4e4a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifePoints: 10
+  bulletDamage: 10
+  deathCause: terrain
 --- !u!1001 &4322238149992907802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 363888714473245642, guid: 8febb4001494848c2a96bb5a63a65f46,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2236418611324815922, guid: 8febb4001494848c2a96bb5a63a65f46,
         type: 3}
@@ -383,7 +399,7 @@ PrefabInstance:
     - target: {fileID: 2236418611324815922, guid: 8febb4001494848c2a96bb5a63a65f46,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.481
+      value: 0.3271
       objectReference: {fileID: 0}
     - target: {fileID: 2236418611324815922, guid: 8febb4001494848c2a96bb5a63a65f46,
         type: 3}
@@ -413,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 2236418611324815922, guid: 8febb4001494848c2a96bb5a63a65f46,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.035
+      value: 0.0048
       objectReference: {fileID: 0}
     - target: {fileID: 2236418611324815922, guid: 8febb4001494848c2a96bb5a63a65f46,
         type: 3}
@@ -579,10 +595,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6545926552108047270}
     m_Modifications:
+    - target: {fileID: 1025634400661858973, guid: fef25860c1e814612b29e8e6f22a010d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -31.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2891628654166489413, guid: fef25860c1e814612b29e8e6f22a010d,
         type: 3}
       propertyPath: m_Name
       value: Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891628654166489413, guid: fef25860c1e814612b29e8e6f22a010d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3613207189583968445, guid: fef25860c1e814612b29e8e6f22a010d,
         type: 3}

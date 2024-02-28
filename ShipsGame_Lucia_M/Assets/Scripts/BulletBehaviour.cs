@@ -8,6 +8,11 @@ public class BulletBehaviour : MonoBehaviour
 
     public float lifeTime = 5f;
 
+    [SerializeField]
+    LifeSystem lifeSystem;
+
+    //hago referencia a la nave enemiga
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +25,7 @@ public class BulletBehaviour : MonoBehaviour
         time += Time.deltaTime;
         if (time > lifeTime)
         {
-            this.gameObject.SetActive(false);
-            BulletPool.Instance.ReturnBullet(this.gameObject);
+            DesactivateBullets();
         }
     }
 
@@ -29,5 +33,26 @@ public class BulletBehaviour : MonoBehaviour
     {
 
         time = 0.0f;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "terrain")
+        {
+            DesactivateBullets();
+        }
+
+        if (collision.gameObject.tag == "enemy")
+        {
+            DesactivateBullets();
+
+            
+        }
+    }
+
+    void DesactivateBullets()
+    {
+        this.gameObject.SetActive(false);
+        BulletPool.Instance.ReturnBullet(this.gameObject);
     }
 }
