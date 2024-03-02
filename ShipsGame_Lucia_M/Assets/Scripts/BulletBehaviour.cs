@@ -8,10 +8,9 @@ public class BulletBehaviour : MonoBehaviour
 
     public float lifeTime = 5f;
 
-    [SerializeField]
-    LifeSystem lifeSystem;
+    
 
-    //hago referencia a la nave enemiga
+    
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +44,11 @@ public class BulletBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             DesactivateBullets();
+        }
 
-            
+        if (collision.gameObject.tag == "player")
+        {
+            DesactivateBullets();
         }
     }
 

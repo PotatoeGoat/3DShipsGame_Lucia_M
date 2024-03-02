@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LifeSystem : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class LifeSystem : MonoBehaviour
 
     public string deathCause = "bullet";
 
-    //bool gameRestart = false;
+    public GameController gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class LifeSystem : MonoBehaviour
     {
         lifePoints -= bulletDamage;
 
-        //this.gameObject.SetActive(false);
+       
         
     }
 
@@ -44,9 +45,14 @@ public class LifeSystem : MonoBehaviour
 
                 this.gameObject.SetActive(false);
 
-                //gameRestart = true;
+               
 
                 Debug.Log("muerto");
+            }
+
+            if (gameController.playerDies == true)
+            {
+                gameController.RestartGame();
             }
         }
 

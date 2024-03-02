@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class InputPlayer : MonoBehaviour
 {
+    
+
     BulletPool pool;
+
+    
 
     public float bulletSpeed = 200f;
 
-    float timeToShoot = 0.1f; // Tiempo entre cada disparo
+    public float timeToShoot = 0.1f; // Tiempo entre cada disparo
     float timeSinceLastBullet = 0f; // Tiempo pasado desde el último disparo
 
     // Start is called before the first frame update
@@ -27,11 +31,12 @@ public class InputPlayer : MonoBehaviour
         if (timeSinceLastBullet >= timeToShoot && Input.GetKey("space"))
         {
             Shoot(); //Disparar
+
             timeSinceLastBullet = 0f; // Para reiniciar el tiempo
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         GameObject bullet = pool.GetBullet();
 
@@ -44,6 +49,8 @@ public class InputPlayer : MonoBehaviour
             bullet.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
         }
     }
+
+    
 }
 
 

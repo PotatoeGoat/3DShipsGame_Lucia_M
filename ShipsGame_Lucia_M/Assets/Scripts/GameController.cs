@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    
+    public bool playerDies = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +23,11 @@ public class GameController : MonoBehaviour
     {
         if (collision.gameObject.tag == "terrain")
         {
-            RestartGame();
+            playerDies = true;
         }
     }
 
-    void RestartGame()
+    public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
