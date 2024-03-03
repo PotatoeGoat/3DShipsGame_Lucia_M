@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.8367643, z: 0, w: 0.54756325}
   m_LocalPosition: {x: 684, y: 239.9, z: 175.3}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.6000001, y: 0.6, z: 0.6000001}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5512862173524240002}
@@ -53,7 +53,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5.387097
   m_Height: 22.90005
@@ -106,7 +106,7 @@ MonoBehaviour:
   lifePoints: 10
   bulletDamage: 10
   deathCause: bullet
-  gameController: {fileID: 0}
+  playerDie: 0
 --- !u!1 &8428172874872514664
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,8 +118,6 @@ GameObject:
   - component: {fileID: 5512862173524240002}
   - component: {fileID: 3854183394657488924}
   - component: {fileID: 4646239869764930755}
-  - component: {fileID: 4796522886673591927}
-  - component: {fileID: 2962406879132504396}
   m_Layer: 0
   m_Name: Cube
   m_TagString: enemy
@@ -198,44 +196,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4796522886673591927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428172874872514664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f53cbc43ab53049f0a917083af4e4a62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifePoints: 10
-  bulletDamage: 10
-  deathCause: bullet
-  gameController: {fileID: 0}
---- !u!64 &2962406879132504396
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8428172874872514664}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 4e3611fb08a894ea8939ab9d51b4c78f, type: 3}
 --- !u!1 &9111220277169195024
 GameObject:
   m_ObjectHideFlags: 0
