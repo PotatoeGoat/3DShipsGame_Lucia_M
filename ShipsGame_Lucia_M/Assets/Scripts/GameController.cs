@@ -60,8 +60,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            countdownText.text = "Go!";
-            countdownText.gameObject.SetActive(false);
+            
             RestartGame();
         }
     }
