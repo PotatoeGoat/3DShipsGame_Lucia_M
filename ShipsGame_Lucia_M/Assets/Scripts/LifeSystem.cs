@@ -9,37 +9,43 @@ public class LifeSystem : MonoBehaviour
     public int lifePoints = 10;
 
     public int bulletDamage = 10;
+    public int terrainDamage;
 
-    public string deathCause = "bullet";
+    public string deathCause1 = "bullet";
+    public string deathCause2 = "bullet";
 
     public bool playerDie = false;
+
+
+    public Explosion explosion;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        terrainDamage = bulletDamage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        DestroyEnemies();
+        
     }
 
     
 
-    public void DestroyEnemies()
+    public void DestroyEnemies(int damageCause)
     {
-        lifePoints -= bulletDamage;
-
-       
-        
+        lifePoints -= damageCause;
     }
+
+    
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == deathCause)
+        if (collision.gameObject.tag == deathCause1)
         {
+            DestroyEnemies(bulletDamage);
+
             if (lifePoints <= 0)
             {
 
@@ -47,12 +53,31 @@ public class LifeSystem : MonoBehaviour
 
                 playerDie = true;
 
+                explosion.ActivateExplosion();
+
                 Debug.Log("muerto");
             }
 
             
         }
 
-       
+        if (collision.gameObject.tag == deathCause2)
+        {
+            DestroyEnemies(terrainDamage);
+
+            if (lifePoints <= 0)
+            {
+
+                this.gameObject.SetActive(false);
+
+                playerDie = true;
+                explosion.ActivateExplosion();
+                Debug.Log("muerto");
+            }
+
+
+        }
+
+
     }
 }

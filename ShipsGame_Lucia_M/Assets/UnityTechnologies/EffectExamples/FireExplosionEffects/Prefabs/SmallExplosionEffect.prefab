@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013505110654}
+  - component: {fileID: 1006985859790699970}
   - component: {fileID: 198000010687303002}
   - component: {fileID: 199000011921653214}
   m_Layer: 0
@@ -33,6 +34,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011428506136}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006985859790699970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010972190198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0764b507df94d4ee0845ccc1260b85d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whoDied: {fileID: 0}
 --- !u!198 &198000010687303002
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -48,9 +62,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -4783,6 +4797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013521198930}
+  - component: {fileID: 3231298845323443655}
   - component: {fileID: 198000012569031976}
   - component: {fileID: 199000010351236460}
   m_Layer: 0
@@ -4807,6 +4822,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011428506136}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3231298845323443655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011277865272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0764b507df94d4ee0845ccc1260b85d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whoDied: {fileID: 0}
 --- !u!198 &198000012569031976
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4822,9 +4850,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -9606,6 +9634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000014291108156}
+  - component: {fileID: 5485946773547305699}
   - component: {fileID: 198000010217891986}
   - component: {fileID: 199000012837251388}
   m_Layer: 0
@@ -9630,6 +9659,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011428506136}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5485946773547305699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011445404004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0764b507df94d4ee0845ccc1260b85d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whoDied: {fileID: 0}
 --- !u!198 &198000010217891986
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -9645,9 +9687,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -14546,6 +14588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0764b507df94d4ee0845ccc1260b85d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whoDied: {fileID: 0}
 --- !u!198 &198000012942003240
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -14563,7 +14606,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
