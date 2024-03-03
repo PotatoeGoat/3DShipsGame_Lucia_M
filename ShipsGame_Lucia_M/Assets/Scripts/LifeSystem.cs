@@ -12,7 +12,7 @@ public class LifeSystem : MonoBehaviour
 
     public string deathCause = "bullet";
 
-    public GameController gameController;
+    public bool playerDie = false;
 
     // Start is called before the first frame update
     void Start()
@@ -45,15 +45,12 @@ public class LifeSystem : MonoBehaviour
 
                 this.gameObject.SetActive(false);
 
-               
+                playerDie = true;
 
                 Debug.Log("muerto");
             }
 
-            if (gameController.playerDies == true)
-            {
-                gameController.RestartGame();
-            }
+            
         }
 
        
