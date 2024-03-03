@@ -17,7 +17,7 @@ public class LifeSystem : MonoBehaviour
     public bool playerDie = false;
 
 
-    public Explosion explosion;
+    public ActivateExplosion activatingExplosion;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +53,7 @@ public class LifeSystem : MonoBehaviour
 
                 playerDie = true;
 
-                explosion.ActivateExplosion();
+                activatingExplosion.ActivateExplosions();
 
                 Debug.Log("muerto");
             }
@@ -71,7 +71,7 @@ public class LifeSystem : MonoBehaviour
                 this.gameObject.SetActive(false);
 
                 playerDie = true;
-                explosion.ActivateExplosion();
+                activatingExplosion.ActivateExplosions();
                 Debug.Log("muerto");
             }
 

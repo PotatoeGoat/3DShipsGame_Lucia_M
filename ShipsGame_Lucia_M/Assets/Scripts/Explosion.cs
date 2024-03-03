@@ -5,14 +5,12 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     public Transform whoDied;
-
-    ParticleSystem explosionParticleSystem;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.SetActive(false);
-        explosionParticleSystem = GetComponent<ParticleSystem>();
+        
     }
 
     // Update is called once per frame
@@ -26,14 +24,5 @@ public class Explosion : MonoBehaviour
         }
     }
 
-    public void ActivateExplosion()
-    {
-        this.gameObject.SetActive(true);
-        
-        if (explosionParticleSystem != null)
-        {
-            
-            explosionParticleSystem.Play();
-        }
-    }
+   
 }
