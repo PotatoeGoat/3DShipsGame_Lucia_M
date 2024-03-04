@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         PlayerMovements();
 
-        Debug.Log(playerSpeed);
+        //Debug.Log(playerSpeed);
 
 
     }

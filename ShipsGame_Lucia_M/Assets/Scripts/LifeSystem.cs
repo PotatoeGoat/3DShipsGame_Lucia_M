@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class LifeSystem : MonoBehaviour
 {
 
     public int lifePoints = 10;
+
+    
+
+    
+    
+    
 
     public int bulletDamage = 10;
     public int terrainDamage;
@@ -23,6 +31,8 @@ public class LifeSystem : MonoBehaviour
     void Start()
     {
         terrainDamage = bulletDamage;
+
+        
     }
 
     // Update is called once per frame
@@ -48,16 +58,18 @@ public class LifeSystem : MonoBehaviour
 
             if (lifePoints <= 0)
             {
-
+                
+                
                 this.gameObject.SetActive(false);
-
-                playerDie = true;
+                
+                //playerDie = true;
 
                 activatingExplosion.ActivateExplosions();
 
                 Debug.Log("muerto");
             }
 
+            
             
         }
 
@@ -78,6 +90,7 @@ public class LifeSystem : MonoBehaviour
 
         }
 
-
+        
+        
     }
 }

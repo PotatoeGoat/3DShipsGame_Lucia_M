@@ -8,14 +8,13 @@ public class BulletBehaviour : MonoBehaviour
 
     public float lifeTime = 5f;
 
-    
 
     
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -26,6 +25,9 @@ public class BulletBehaviour : MonoBehaviour
         {
             DesactivateBullets();
         }
+
+
+        
     }
 
     private void OnEnable()
@@ -44,6 +46,7 @@ public class BulletBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             DesactivateBullets();
+            
         }
 
         if (collision.gameObject.tag == "player")
@@ -57,4 +60,6 @@ public class BulletBehaviour : MonoBehaviour
         this.gameObject.SetActive(false);
         BulletPool.Instance.ReturnBullet(this.gameObject);
     }
+
+    
 }
