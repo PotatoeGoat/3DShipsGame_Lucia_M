@@ -714,15 +714,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 613
+      value: 519
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 274
+      value: 239.9
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 194
+      value: 501
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2018,7 +2018,7 @@ PrefabInstance:
         type: 3}
       propertyPath: activatingExplosion
       value: 
-      objectReference: {fileID: 2105744968}
+      objectReference: {fileID: 2016588242}
     - target: {fileID: 8339515109316814685, guid: 170efb843e56f4faf94af732826e8a26,
         type: 3}
       propertyPath: m_Name
@@ -2275,6 +2275,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1061319203}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1070189439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4228216068667882289, guid: ecdd96beb7f93494880c052dfccf9dc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1120757828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ae3e83c2dc7491c8ff9c45d1102cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1120757828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2301,15 +2313,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 613
+      value: 293
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 274
+      value: 239.9
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 194
+      value: 651
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4067,7 +4079,7 @@ PrefabInstance:
         type: 3}
       propertyPath: activatingExplosion
       value: 
-      objectReference: {fileID: 2105744968}
+      objectReference: {fileID: 1070189439}
     - target: {fileID: 8339515109316814685, guid: 170efb843e56f4faf94af732826e8a26,
         type: 3}
       propertyPath: m_Name
@@ -4507,6 +4519,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8423991b29b494130ad79ce6667f9552, type: 3}
+--- !u!114 &2016588242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4228216068667882289, guid: ecdd96beb7f93494880c052dfccf9dc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 388645996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ae3e83c2dc7491c8ff9c45d1102cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029766752
 GameObject:
   m_ObjectHideFlags: 0
@@ -4988,6 +5012,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1781731444}
     m_Modifications:
+    - target: {fileID: 1874532770124794605, guid: 170efb843e56f4faf94af732826e8a26,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5526842281418942940, guid: 170efb843e56f4faf94af732826e8a26,
         type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -5078,6 +5107,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[17]
       value: 
       objectReference: {fileID: 1738615726}
+    - target: {fileID: 6167055598727570660, guid: 170efb843e56f4faf94af732826e8a26,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6331565395787019136, guid: 170efb843e56f4faf94af732826e8a26,
         type: 3}
       propertyPath: explosion
