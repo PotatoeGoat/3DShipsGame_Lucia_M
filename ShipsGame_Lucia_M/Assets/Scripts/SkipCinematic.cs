@@ -9,7 +9,7 @@ public class SkipCinematic : MonoBehaviour
 
     public GameObject canvasButton;
 
-    public GameObject CinematicShip, CinematicEnemyShips;
+    public GameObject CinematicShip, CinematicEnemyShips, EnemyShips;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,8 @@ public class SkipCinematic : MonoBehaviour
         canvasButton.SetActive(false);
         CinematicEnemyShips.SetActive(false);
         CinematicShip.SetActive(false);
+        EnemyShips.SetActive(true);
         timelinedirector.gameObject.SetActive(false);
+        
     }
 }
