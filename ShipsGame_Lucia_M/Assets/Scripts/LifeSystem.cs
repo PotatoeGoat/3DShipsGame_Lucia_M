@@ -10,9 +10,9 @@ public class LifeSystem : MonoBehaviour
 
     public int lifePoints = 10;
 
-    
 
-    
+
+
     
     
 
@@ -81,7 +81,7 @@ public class LifeSystem : MonoBehaviour
             {
 
                 this.gameObject.SetActive(false);
-
+                
                 playerDie = true;
                 activatingExplosion.ActivateExplosions();
                 Debug.Log("muerto");
