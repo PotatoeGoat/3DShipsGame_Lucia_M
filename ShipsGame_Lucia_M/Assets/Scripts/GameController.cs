@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     float timer = 0f;
     float oneSec = 1f;
 
-    
+
     public TextMeshProUGUI countdownText;
 
     public GameObject countdownScreen;
@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         countdownScreen.SetActive(false);
         countdownText.gameObject.SetActive(false);
     }
@@ -48,18 +48,18 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if(enemiesCount <= 2)
+        if (enemiesCount <= 0)
         {
             EndGameCanvas.SetActive(true);
             playerMovement.enabled = false;
 
             player.SetActive(false);
-            
+
         }
-        
+
     }
 
-   
+
 
     public void RestartGame()
     {
@@ -81,8 +81,9 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            
+
             RestartGame();
         }
     }
 }
+
