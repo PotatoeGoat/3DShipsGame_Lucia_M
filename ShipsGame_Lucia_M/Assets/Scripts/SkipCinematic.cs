@@ -7,7 +7,9 @@ public class SkipCinematic : MonoBehaviour
 {
     public PlayableDirector timelinedirector;
 
-    public GameObject canvasButton;
+    
+
+    public GameObject canvasButton, chamberedBulletsCanvas, cinematicCanvas;
 
     public GameObject CinematicShip, CinematicEnemyShips, EnemyShips;
 
@@ -30,7 +32,9 @@ public class SkipCinematic : MonoBehaviour
         CinematicEnemyShips.SetActive(false);
         CinematicShip.SetActive(false);
         EnemyShips.SetActive(true);
+        chamberedBulletsCanvas.SetActive(true);
         timelinedirector.gameObject.SetActive(false);
+        cinematicCanvas.SetActive(false);
         
     }
 }
