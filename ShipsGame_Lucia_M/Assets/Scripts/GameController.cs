@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if(enemiesCount <= 1)
+        if(enemiesCount <= 0)
         {
             EndGameCanvas.SetActive(true);
             playerMovement.enabled = false;
