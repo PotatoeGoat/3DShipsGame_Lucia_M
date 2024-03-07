@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class BulletBehaviour : MonoBehaviour
 {
     float time = 0.0f;
 
     public float lifeTime = 5f;
+
 
     
 
@@ -26,8 +26,8 @@ public class BulletBehaviour : MonoBehaviour
             DesactivateBullets();
         }
 
-       
 
+        
     }
 
     private void OnEnable()
@@ -62,5 +62,4 @@ public class BulletBehaviour : MonoBehaviour
     }
 
     
-
 }
