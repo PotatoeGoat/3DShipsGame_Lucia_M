@@ -17,6 +17,12 @@ public class GameController : MonoBehaviour
 
     public LifeSystem lifeSystem;
 
+    public PlayerMovement playerMovement;
+
+    public GameObject EndGameCanvas;
+
+    public int enemiesCount = 3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +46,12 @@ public class GameController : MonoBehaviour
                 UpdateCountDown();
             }
         }
+
+        if(enemiesCount <= 1)
+        {
+            EndGameCanvas.SetActive(true);
+            playerMovement.enabled = false;
+        }
         
     }
 
@@ -48,6 +60,11 @@ public class GameController : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
     void UpdateCountDown()

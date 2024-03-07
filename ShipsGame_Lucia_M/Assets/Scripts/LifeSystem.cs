@@ -10,12 +10,6 @@ public class LifeSystem : MonoBehaviour
 
     public int lifePoints = 10;
 
-
-
-
-    
-    
-
     public int bulletDamage = 10;
     public int terrainDamage;
 
@@ -24,6 +18,8 @@ public class LifeSystem : MonoBehaviour
 
     public bool playerDie = false;
 
+
+    public GameController gameController;
 
     public ActivateExplosion activatingExplosion;
 
@@ -58,7 +54,7 @@ public class LifeSystem : MonoBehaviour
 
             if (lifePoints <= 0)
             {
-                
+                gameController.enemiesCount--;
                 
                 this.gameObject.SetActive(false);
                 
