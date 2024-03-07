@@ -8,32 +8,17 @@ public class InputPlayer : MonoBehaviour
 
     BulletPool pool;
 
+    
+
     public float bulletSpeed = 200f;
 
     public float timeToShoot = 0.1f; // Tiempo entre cada disparo
     float timeSinceLastBullet = 0f; // Tiempo pasado desde el último disparo
 
-
-    //EXAMEN
-
-    public int shootedBullets;
-    public int initialBullets = 15;
-
-    public bool getKeySpace = false;
-    public bool getKeyE = false;
-
-    public bool reloading = false;
-
     // Start is called before the first frame update
     void Awake()
     {
         pool = GetComponent<BulletPool>();
-        shootedBullets = initialBullets;
-    }
-
-    void Start()
-    {
-        reloading = false;
     }
 
     // Update is called once per frame
@@ -41,39 +26,18 @@ public class InputPlayer : MonoBehaviour
     {
         // Contar el tiempo transcurrido
         timeSinceLastBullet += Time.deltaTime;
-        if (shootedBullets > 0)
+
+        // Si el tiempo transcurrido es mayor a el tiempo propuesto y se presiona la tecla space
+        if (timeSinceLastBullet >= timeToShoot && Input.GetKey("space"))
         {
-            // Si el tiempo transcurrido es mayor a el tiempo propuesto y se presiona la tecla space
-            if (timeSinceLastBullet >= timeToShoot && Input.GetKey("space"))
-            {
-                Shoot(); //Disparar
-                
-                timeSinceLastBullet = 0f; // Para reiniciar el tiempo
-                if (shootedBullets == 0)
-                {
-                    reloading = true;
-                    getKeySpace = true;
-                    
-                }
-            }
+            Shoot(); //Disparar
 
-            if (Input.GetKeyDown("e"))
-            {
-                
-                reloading = true;
-                getKeyE = true;
-
-            }
+            timeSinceLastBullet = 0f; // Para reiniciar el tiempo
         }
-
-        
-        
     }
 
     public void Shoot()
     {
-        shootedBullets--;
-
         GameObject bullet = pool.GetBullet();
 
         if (bullet != null) // Verificar si se obtuvo una bala de la pool
@@ -87,8 +51,6 @@ public class InputPlayer : MonoBehaviour
     }
 
     
-
-
 }
 
 
