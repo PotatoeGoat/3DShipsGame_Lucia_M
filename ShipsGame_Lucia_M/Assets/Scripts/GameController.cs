@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
 
     public PlayerMovement playerMovement;
 
+    public GameObject player;
     public GameObject EndGameCanvas;
 
     public int enemiesCount = 3;
@@ -47,10 +48,13 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if(enemiesCount <= 0)
+        if(enemiesCount <= 2)
         {
             EndGameCanvas.SetActive(true);
             playerMovement.enabled = false;
+
+            player.SetActive(false);
+            
         }
         
     }

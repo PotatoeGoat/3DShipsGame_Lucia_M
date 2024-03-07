@@ -6659,6 +6659,7 @@ MonoBehaviour:
   countdownScreen: {fileID: 1843797086}
   lifeSystem: {fileID: 476409155768038108}
   playerMovement: {fileID: 476409155768038120}
+  player: {fileID: 451235029}
   EndGameCanvas: {fileID: 1418546300}
   enemiesCount: 3
 --- !u!4 &1254430139
