@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 5376419826940862665}
   - component: {fileID: 1057152994514429739}
   - component: {fileID: 3456720727258136810}
+  - component: {fileID: 2117094066884746589}
   - component: {fileID: 1661917366581507122}
   m_Layer: 0
   m_Name: NaveJugador
@@ -318,8 +319,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifePoints: 10
   bulletDamage: 10
-  deathCause: terrain
+  terrainDamage: 0
+  deathCause1: bullet
+  deathCause2: bullet
   playerDie: 0
+  activatingExplosion: {fileID: 0}
+--- !u!114 &2117094066884746589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880607275009360156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfff2e4cf60a04a188c5ad5918357375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &1661917366581507122
 MeshCollider:
   m_ObjectHideFlags: 0
